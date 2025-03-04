@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Certifications.css';
 import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
-import { SiGooglecloud, SiOracle, SiMdbook, SiInfosys, SiScala } from 'react-icons/si';
+import { SiGooglecloud, SiOracle, SiInfosys, SiScala } from 'react-icons/si';
 import { Certification } from '../types';
 import { getCertifications } from '../queries/getCertifications';
 
@@ -9,8 +9,7 @@ import { getCertifications } from '../queries/getCertifications';
 const iconData: { [key: string]: JSX.Element } = {
   'coursera': <SiGooglecloud/>,
   'oracle': <SiOracle />,
-  'scaler': <SiScala />, 
-  'nptel': <SiMdbook />,
+  'scaler': <SiScala />,
   'infosys': <SiInfosys />,
 };
 

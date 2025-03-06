@@ -2,7 +2,7 @@ export async function getProfileBanner() {
   return {
     backgroundImage: { url: "" },
     headline: "Full Stack Java Developer",
-    resumeLink: { url: "https://drive.google.com/file/d/1mUZkmTOk9Jszgc07Zy4tKj132JaQPeA8/view?usp=sharing" },
+    resumeLink: { url: "https://drive.google.com/file/d/1t_oVSO2cS-tsEaBmtQXYnwcQFp4TXCkt/view?usp=drive_link" },
     linkedinLink: "https://www.linkedin.com/in/dhanush-m-887763226/",
     githubLink: "https://github.com/Dhanushm4422", 
     leetcodeLink: "https://leetcode.com/u/dhanushm4422/",

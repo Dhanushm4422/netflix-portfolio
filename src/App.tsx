@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import ScrollToTop from './ScrollToTop'; // Import the ScrollToTop component
 import NetflixTitle from './NetflixTitle';
 import ProfilePage from './profilePage/profilePage';
 import Browse from './browse/browse';
@@ -20,13 +19,34 @@ import { Analytics } from "@vercel/analytics/react";
 const App: React.FC = () => {
   const { pathname } = useLocation();
 
-  React.useEffect(() => {
-    window.history.scrollRestoration = 'manual'; // Disable browser's scroll restoration
+  useEffect(() => {
+    if (pathname.startsWith("/profile/")) {
+      // Restore scroll position for the profile page
+      const savedScrollPosition = sessionStorage.getItem("profileScroll");
+      if (savedScrollPosition) {
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+      }
+    } else {
+      // Save scroll position before leaving the profile page
+      if (sessionStorage.getItem("profileScroll") === null) {
+        sessionStorage.setItem("profileScroll", "0");
+      }
+      window.scrollTo(0, 0); // Scroll to top for all other pages
+    }
+
+    // Save scroll position when leaving profile page
+    const handleScroll = () => {
+      if (pathname.startsWith("/profile/")) {
+        sessionStorage.setItem("profileScroll", window.scrollY.toString());
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
   return (
     <>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<NetflixTitle />} />
         <Route path="/browse" element={<Browse />} />

@@ -15,6 +15,7 @@ import Music from './pages/Music';
 import Reading from './pages/Reading';
 import Blogs from './pages/Blogs';
 import Certifications from './pages/Certifications';
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ const App: React.FC = () => {
         <Route path="/blogs" element={<Layout><Blogs /></Layout>} />
         <Route path="/certifications" element={<Layout><Certifications /></Layout>} />
       </Routes>
+      <Analytics /> 
     </>
   );
 };

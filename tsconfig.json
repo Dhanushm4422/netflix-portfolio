@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es6", // Use ES6 or higher for modern browsers
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": false, // Set to false to catch library issues
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

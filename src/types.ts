@@ -29,6 +29,7 @@ export interface TimelineItem {
 
 
 export interface Project {
+  githubLink: string | undefined;
   title: string;
   description: string;
   techUsed: string;

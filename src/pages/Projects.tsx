@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Projects.css';
-import { FaReact, FaNodeJs, FaAngular, FaJava, FaPython, FaPhp, FaHtml5, FaCss3, FaBootstrap, FaJs, FaAws } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaAngular, FaJava, FaPython, FaPhp, FaHtml5, FaCss3, FaBootstrap, FaJs, FaAws, FaGithub } from 'react-icons/fa';
 import { SiMongodb, SiMysql, SiDjango, SiExpress, SiThingiverse } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
 
@@ -24,8 +24,8 @@ const techIcons: { [key: string]: JSX.Element } = {
   "Django": <SiDjango />,
   "Java": <FaJava />,
   "Angular": <FaAngular />,
-  "AWS": <FaAws />, // Updated to FaAws
-  "ThingBoard": <SiThingiverse />, // Correct icon
+  "AWS": <FaAws />,
+  "ThingBoard": <SiThingiverse />,
 };
 
 const Projects: React.FC = () => {
@@ -57,6 +57,17 @@ const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link"
+                >
+                  <FaGithub className="github-icon" />
+                  <span className="link-text">Link</span>
+                </a>
+              )}
             </div>
           </div>
         ))}

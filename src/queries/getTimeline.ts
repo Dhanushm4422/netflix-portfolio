@@ -32,7 +32,7 @@ export async function getTimeline(): Promise<TimelineItem[]> {
       timelineType: "education", 
       title: "MSc in Software Systems",
       techStack: "",
-      summaryPoints: ["CGPA: 8.99", "Specialized in Software Systems", "Participated in various technical events"],
+      summaryPoints: ["CGPA: 8.93", "Specialized in Software Systems", "Participated in various technical events"],
       dateRange: "2021 - 2026",
     },
     {
@@ -40,7 +40,7 @@ export async function getTimeline(): Promise<TimelineItem[]> {
       timelineType: "education",
       title: "SSLC & HSC",
       techStack: "",
-      summaryPoints: ["SSLC: 88.60%", "HSC: 89.50%"],
+      summaryPoints: ["SSLC: 88.60%", "HSC: 89.41%"],
       dateRange: "2018 - 2021",
     }
   ];

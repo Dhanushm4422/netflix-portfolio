@@ -4,8 +4,25 @@ import { getSkills } from '../queries/getSkills';
 import { Skill } from '../types';
 
 // Icons
-import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaJava, FaBrain, FaHandsHelping, FaBriefcase, FaCode } from 'react-icons/fa';
-import { SiJavascript, SiPhp, SiSpring, SiMysql, SiMongodb, SiExpress, SiHtml5, SiCss3, SiBootstrap, SiJenkins, SiOracle, SiGooglecloud, SiTypescript, SiTailwindcss, SiThingiverse } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaJava, FaBrain } from 'react-icons/fa';
+import {
+  SiJavascript,
+  SiPhp,
+  SiSpring,
+  SiMysql,
+  SiMongodb,
+  SiExpress,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
+  SiJenkins,
+  SiOracle,
+  SiGooglecloud,
+  SiTypescript,
+  SiTailwindcss,
+  SiThingiverse,
+  SiFirebase,
+} from 'react-icons/si';
 
 // Icon mapping
 const iconMap: { [key: string]: JSX.Element } = {
@@ -24,19 +41,17 @@ const iconMap: { [key: string]: JSX.Element } = {
   FaGitAlt: <FaGitAlt />,
   FaDocker: <FaDocker />,
   SiJenkins: <SiJenkins />,
-  FaCode: <FaCode />,
   FaBrain: <FaBrain />,
-  FaHandsHelping: <FaHandsHelping />,
-  FaBriefcase: <FaBriefcase />,
   SiOracle: <SiOracle />,
   SiGooglecloud: <SiGooglecloud />,
   SiTypescript: <SiTypescript />,
   SiTailwindcss: <SiTailwindcss />,
   SiThingiverse: <SiThingiverse />,
+  SiFirebase: <SiFirebase />,
 };
 
 // Fallback icon
-const fallbackIcon = <FaCode />;
+const fallbackIcon = <FaReact />;
 
 const Skills: React.FC = () => {
   const [skillsData, setSkillsData] = useState<Skill[]>([]);
@@ -70,7 +85,7 @@ const Skills: React.FC = () => {
     return acc;
   }, {});
 
-  // Custom category order to ensure "Cloud Platforms" comes after "Frontend Development"
+  // Custom category order
   const categoryOrder = [
     'Programming Languages',
     'Backend Development',
@@ -80,8 +95,6 @@ const Skills: React.FC = () => {
     'DevOps',
     'Version Control',
     'AI/ML',
-    'Project Management',
-    'Development',
   ];
 
   const sortedCategories = Object.keys(skillsByCategory).sort((a, b) => {

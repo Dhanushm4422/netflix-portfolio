@@ -8,7 +8,7 @@ export async function getProfileBanner() {
     leetcodeLink: "https://leetcode.com/u/dhanushm4422/",
     profileSummary:
       "A highly motivated and ambitious software student pursuing a degree in MSc Software Systems. " +
-      "With a strong foundation in Java, React.js, and web development, I am proficient in building dynamic and responsive web applications. " +
+      "With a strong foundation in Java, React.js, and Full Stack development, I am proficient in building dynamic and responsive softwares. " +
       "Currently preparing for placements, I have a solid understanding of data structures, operating systems, networking, and databases, " +
       "complemented by hands-on experience from various academic projects and hackathons. " +
       "Passionate about technology and learning, I have demonstrated skills in backend and frontend development, particularly in full-stack applications. " +

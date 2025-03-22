@@ -56,6 +56,12 @@ export async function getSkills(): Promise<Skill[]> {
       icon: "FaReact",
     },
     {
+      name: "React Native",
+      category: "Frontend Development",
+      description: "Experienced in building cross-platform mobile applications using React Native.",
+      icon: "FaReact",
+    },
+    {
       name: "Node.js",
       category: "Backend Development",
       description: "Skilled in developing server-side applications using Node.js.",
@@ -98,28 +104,10 @@ export async function getSkills(): Promise<Skill[]> {
       icon: "SiJenkins",
     },
     {
-      name: "Web Development",
-      category: "Development",
-      description: "Proficient in full-stack web development.",
-      icon: "FaCode",
-    },
-    {
       name: "Machine Learning",
       category: "AI/ML",
       description: "Basic knowledge of machine learning concepts and algorithms.",
       icon: "FaBrain",
-    },
-    {
-      name: "Agile",
-      category: "Project Management",
-      description: "Experience working in agile teams and managing software projects.",
-      icon: "FaHandsHelping",
-    },
-    {
-      name: "SPM",
-      category: "Project Management",
-      description: "Experience in managing software projects efficiently.",
-      icon: "FaBriefcase",
     },
     {
       name: "OCI",
@@ -134,9 +122,9 @@ export async function getSkills(): Promise<Skill[]> {
       icon: "SiGooglecloud",
     },
     {
-      name: "ThingBoard IoT",
+      name: "ThingsBoard IoT",
       category: "Cloud Platforms",
-      description: "Experience with ThingBoard IoT Cloud Platform for IoT solutions.",
+      description: "Experience with ThingsBoard IoT Cloud Platform for IoT solutions.",
       icon: "SiThingiverse",
     },
     {
@@ -150,6 +138,12 @@ export async function getSkills(): Promise<Skill[]> {
       category: "Frontend Development",
       description: "Experienced in building modern and responsive UIs using Tailwind CSS.",
       icon: "SiTailwindcss",
+    },
+    {
+      name: "Firebase",
+      category: "Backend Development",
+      description: "Experience in building real-time applications using Firebase.",
+      icon: "SiFirebase",
     },
   ];
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Projects.css';
 import { FaReact, FaNodeJs, FaAngular, FaJava, FaPython, FaPhp, FaHtml5, FaCss3, FaBootstrap, FaJs, FaAws, FaGithub } from 'react-icons/fa';
-import { SiMongodb, SiMysql, SiDjango, SiExpress, SiThingiverse } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiDjango, SiExpress, SiThingiverse, SiFirebase } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
 
 import { Project } from '../types';
@@ -9,6 +9,8 @@ import { getProjects } from '../queries/getProjects';
 
 const techIcons: { [key: string]: JSX.Element } = {
   "React": <FaReact />,
+  "React Native": <FaReact />, // Using the same icon as React for React Native
+  "Firebase": <SiFirebase />,
   "Node.js": <FaNodeJs />,
   "MongoDB": <SiMongodb />,
   "Express.js": <SiExpress />,
@@ -65,7 +67,7 @@ const Projects: React.FC = () => {
                   className="github-link"
                 >
                   <FaGithub className="github-icon" />
-                  <span className="link-text">Link</span>
+                  <span className="link-text">View</span>
                 </a>
               )}
             </div>

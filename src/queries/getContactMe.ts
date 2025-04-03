@@ -4,8 +4,8 @@ export async function getContactMe() {
   return {
     profilePicture: { url: profilePic }, 
     name: "Dhanush M",
-    title: "Java Full Stack Developer",
-    summary: "MSc Software Systems student with strong skills in Java, React.js, and full-stack development, preparing for software development placements.",
+    title: "Full Stack Developer",
+    summary: "M.Sc Software Systems student with strong skills in MERN and Java development, preparing for software development placements.",
     companyUniversity: "Kongu Engineering College",
     linkedinLink: "https://www.linkedin.com/in/dhanush-m-887763226/",
     email: "dhanushm4422@gmail.com",
